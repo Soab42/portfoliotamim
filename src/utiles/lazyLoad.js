@@ -5,11 +5,15 @@
    
 // }
 
-const componentMap = {
-    about: () => import('../components/About'),
-    certificate: () => import('../components/Certificate'),
-    // Add other components here
+// componentMap.js
+export const componentMap = {
+  About: () => import('../components/About'),
+  Resume: () => import('../components/Resume'),
+  Works: () => import('../components/Works'),
+  Certificate: () => import('../components/Certificate'),
+  Contact: () => import('../components/Contact'),
 };
+
 
 export function lazyLoad(file) {
     const importFunction = componentMap[file];
